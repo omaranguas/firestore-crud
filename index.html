@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://img.icons8.com/color/48/000000/firebase.png"
+    />
+
+    <title>Firebase - CRUD</title>
+  </head>
+
+  <body class="bg-light">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form id="task-form">
+                <input
+                  id="task-title"
+                  type="text"
+                  placeholder="Task title"
+                  class="form-control mb-3"
+                  autofocus
+                  required
+                />
+                <textarea
+                  id="task-description"
+                  rows="5"
+                  placeholder="Short description..."
+                  class="form-control mb-3"
+                  required
+                ></textarea>
+                <button id="btn-task" class="btn btn-success">Save task</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="task-container" class="col-md-6"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBQnZKJM6yKs75J_RYLE9ZzQUd7DeNK5O0",
+        authDomain: "fir-crud-9889a.firebaseapp.com",
+        projectId: "fir-crud-9889a",
+        storageBucket: "fir-crud-9889a.appspot.com",
+        messagingSenderId: "238854742651",
+        appId: "1:238854742651:web:e9c43396bb94a191d738de",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
